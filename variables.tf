@@ -187,6 +187,12 @@ variable "health_check_path" {
   description = "The destination for the health check request"
 }
 
+variable "health_check_protocol" {
+  type        = string
+  default     = "HTTP"
+  description = "The protocol to use to connect with the target. Defaults to HTTP. Not applicable when target_type is lambda"
+}
+
 variable "health_check_timeout" {
   type        = number
   default     = 10
@@ -227,6 +233,12 @@ variable "target_group_port" {
   type        = number
   default     = 80
   description = "The port for the default target group"
+}
+
+variable "target_group_protocl" {
+  type        = string
+  default     = "HTTP"
+  description = "The protocol to use for routing traffic to the targets. Should be one of "TCP", "TLS", "UDP", "TCP_UDP", "HTTP" or "HTTPS". Required when target_type is instance or ip. Does not apply when target_type is lambda"
 }
 
 variable "target_group_name" {
