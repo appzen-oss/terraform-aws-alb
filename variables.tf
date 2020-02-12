@@ -238,7 +238,7 @@ variable "target_group_port" {
 variable "target_group_protocl" {
   type        = string
   default     = "HTTP"
-  description = "The protocol to use for routing traffic to the targets. Should be one of "TCP", "TLS", "UDP", "TCP_UDP", "HTTP" or "HTTPS". Required when target_type is instance or ip. Does not apply when target_type is lambda"
+  description = "The protocol to use for routing traffic to the targets. Should be one of TCP, TLS, UDP, TCP_UDP, HTTP or HTTPS. Required when target_type is instance or ip. Does not apply when target_type is lambda"
 }
 
 variable "target_group_name" {
